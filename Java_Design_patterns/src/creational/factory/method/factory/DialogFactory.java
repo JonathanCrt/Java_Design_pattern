@@ -1,4 +1,4 @@
-package creational.factory.method.creator;
+package creational.factory.method.factory;
 
 import creational.factory.method.product.Button;
 
@@ -7,7 +7,7 @@ import creational.factory.method.product.Button;
  * should have some core business logic which needs different products to be
  * created.
  */
-public abstract class Dialog {
+public abstract class DialogFactory {
     public void render() {
         Button okButton = createButton();
         okButton.onClick();

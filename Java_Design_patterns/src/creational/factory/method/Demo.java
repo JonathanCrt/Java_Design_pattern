@@ -1,11 +1,11 @@
 package creational.factory.method;
 
-import creational.factory.method.creator.Dialog;
-import creational.factory.method.creator.HtmlDialog;
-import creational.factory.method.creator.WindowsDialog;
+import creational.factory.method.factory.DialogFactory;
+import creational.factory.method.factory.HtmlDialogFactory;
+import creational.factory.method.factory.WindowsDialogFactory;
 
 public class Demo {
-    private static Dialog dialog;
+    private static DialogFactory dialog;
 
     public static void main(String[] args) {
         configure();
@@ -18,9 +18,9 @@ public class Demo {
      */
     static void configure() {
         if (System.getProperty("os.name").equals("Windows 10")) {
-            dialog = new WindowsDialog();
+            dialog = new WindowsDialogFactory();
         } else {
-            dialog = new HtmlDialog();
+            dialog = new HtmlDialogFactory();
         }
     }
 

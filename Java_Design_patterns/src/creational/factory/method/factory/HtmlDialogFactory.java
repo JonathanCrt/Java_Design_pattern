@@ -1,9 +1,9 @@
-package creational.factory.method.creator;
+package creational.factory.method.factory;
 
 import creational.factory.method.product.Button;
 import creational.factory.method.product.HtmlButton;
 
-public class HtmlDialog extends Dialog {
+public class HtmlDialogFactory extends DialogFactory {
     @Override
     public Button createButton() {
         return new HtmlButton();
